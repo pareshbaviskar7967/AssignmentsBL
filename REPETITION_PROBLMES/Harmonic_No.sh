@@ -1,12 +1,13 @@
-#!/bpn/bash
+#!/bin/bash
 
 echo "Enter a number : "
 read no
-a=`expr 1 / $p`
-for (( p=1; p<=$n; p++ ))
+
+for (( p=1; p<=$no; p++ ))
 do
-	add+=$a;
+	add+=`expr 1 / $p`;
 	echo "Harmonic(Hn) = 1/$p";
 done
 
-echo "Harmonic number $no= $add";
+echo "Harmonic number $no = ";
+echo $add
